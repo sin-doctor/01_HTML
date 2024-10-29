@@ -28,12 +28,17 @@
     </div>
 
     <script>
+        // 회원가입으로 form 작성한 값을 전달해주는 전달자 생성
+        // 전달자는 A군
+        // script는 영어에서 대소문자 구문을 하기 떄문에 
+        // 위에서 name-Result 로 작성했다면 아래에서도 name-Result 작성해야함  
+
         const A군 = new URL(location.href).searchParams;
         const nameResult = document.getElementById("name-result");
         const idResult = document.getElementById("id-result");
         const pwResult = document.getElementById("pw-result");
         const emailResult = document.getElementById("email-result");
-        const chickenResult =document.getElementById("avorite-chicken-result")
+        const chickenResult =document.getElementById("favorite-chicken-result")
 
         
         nameResult.innerText = A군.get("user-name");

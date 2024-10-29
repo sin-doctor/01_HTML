@@ -3,44 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        img{
-            width: 50%;
-            border-radius: 25px;
-            border: 1px 
-            
-        }
-        div{
-            margin: auto;
-            text-align: center;
-            font-size: 20px;
-            padding: 20px;
-            border: 1px solid darkblue;
-            border-radius: 10px;
-        }
-        input {
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-      button {
-        background-color: tomato;
-        cursor: pointer;
-        font-size: 20px;
-        padding: 20px;
-        border-radius: 15px;
-        border: 1px;
-        color: #ddd;
-      }
-    </style>
+    <title>맛있어 치킨가게 회원가입</title>
+    <link rel="stylesheet" href="../실습과제/241028_style.css"/>
+    <!-- 
+    style 태그에 직접적으로 디자인을 하나씩 작성하지 않고 
+    따로 파일명.css 로 css 특정 파일로 디자인을 작성한 후 
+    link로 불러오고자 하는 디자인 파일명을 작성하면 
+    파일명에 작성된 디자인이 불러와짐
+    -->
 </head>
 <body>
+    <!-- 컨테이너 : container -->
+     
     <div>
         <h1>맛있어 치킨가게 회원가입</h1>
         <br><br>
-      <form action="맛있어치킨가게결과.html">
-        <img src="main-image.jpg" />
+      <form action="241028_회원가입결과.html">
+        <img src="../HTML/main-image.jpg" />
         <br /><br />
         <label>이름 :</label>
         <input type="text" name="user-name" placeholder="홍길동"/>
@@ -57,7 +36,8 @@
         <label>좋아하는 치킨 :</label>
         <input type="text" name="favorite-chicken" placeholder="양념, 후라이드 등"/>
         <br><br>
-        <button>회원가입하기</button>
+
+        <button class="join-button">회원가입하기</button>
       </form>
     </div>
     
