@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>display flex - justify-content</h1>
+    <pre>
+        justify-content: div(=container)와 같은 태그를 
+        수평 방향으로 정렬하고 간격을 조절하는데 사용
+
+        display:flex 를 작성하면 justify-content:flex-start 이미 존재함
+        거의 모든 태그 justify-content:flex-start 존재함
+        justify-content:flex-start   = 요소들이 컨테이너의 왼쪽정렬(기본값)
+        justify-content:flex-end     = 요소들이 컨테이너의 오른쪽정렬
+        justify-content:flex-center  = 요소들이 컨테이너의 가운데정렬
+        
+        태그들의 특정적인 규칙을 제공한 상태로 정렬할 때 사용하는 방법
+        justify-content:space-between = 첫 번째 요소는 왼쪽 끝
+                                        마지막 요소는 오른쪽 끝
+        |요소1        요소2        요소3        요소4|
+                                        나머지 요소들은 균등한 간격을 유지
+        justify-content:space-around = 각 요소 사이 동일한 간격을 제공
+                                       양쪽 끝에는 반간격씩 제공
+        |   요소1      요소2      요소3      요소4   |
+        justify-content:space-evenly = 모든 요소 사이와 양쪽 끝에 동일한 간격을 제공
+
+        |     요소1     요소2     요소3     요소4     |
+    </pre>
+    
+</body>
+</html>
