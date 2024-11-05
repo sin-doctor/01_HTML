@@ -1,0 +1,28 @@
+h1{
+    color: orange;
+    text-align: center;
+}
+div {
+    padding: 15px;
+}
+button{
+    padding: 8px 16px;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+label {
+    font-size: 20px;
+    display: block;
+}
+span{
+    margin: 20px;
+    font-size: 30px;
+    color: blue;
+}
