@@ -22,7 +22,7 @@ if(score >= 90){
 }else if(70 <= score){
     msg.innerText ="C";
     msg.className ="C";
-}else if(60 <=score){
+}else if(60 <= score){
     msg.innerText ="D";
     msg.className ="D";
 }else{
