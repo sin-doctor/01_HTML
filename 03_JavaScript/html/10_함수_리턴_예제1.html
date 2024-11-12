@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +8,52 @@
     <link rel="stylesheet" href="../css/10_함수_리턴_예제1.css" />
   </head>
   <body>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파라미터와 아규먼트 활용하기</title>
+    <link rel="stylesheet" href="../css/10_함수_리턴_예제1.css">
+
+</head>
+<body>
+>>>>>>> 5779ae56a703031a28f30e986ebbb8c5baafe2aa
     <h1>차 구매하기</h1>
     <button onclick="차구매('소나타')">소나타 구매하기</button>
     <button onclick="차구매('아반떼')">아반떼 구매하기</button>
     <button onclick="차구매('제네시스')">제네시스 구매하기</button>
     <h3 id="result"></h3>
+<<<<<<< HEAD
     <script src="../js/10_함수_리턴_예제1.js"></script>
   </body>
 </html>
+=======
+
+    <script>
+        // function 의 위치나 순서는 코딩을 실행하는데 있어 
+        // 어디에 있든 상관이 없음
+        // 하지만 const let으로 작성한 것은 순서 상관이 있기 때문에 
+        // script를 작성하고 맨위에 작성해주는것이 좋음
+        // 각 차의 가격을 확인하고 반환하는 함수
+        function 차가격(model){ // 소나타 아반떼 제네시스 각 가격확인
+            if(model === '소나타'){
+                return 1000; //소나타의 가격
+            }else if(model ==='아반떼'){
+                return 1100; 
+            }else if (model ==='제네시스'){
+                return 1200; 
+            }
+
+        }
+        function 차구매(model){
+            const price = 차가격(model);
+
+            document.getElementById("result").innerText = model + "구매완료되었습니다. 가격은 " + price +"입니다.";
+        }
+    
+       
+        
+    </script>
+</body>
+</html>
+>>>>>>> 5779ae56a703031a28f30e986ebbb8c5baafe2aa
