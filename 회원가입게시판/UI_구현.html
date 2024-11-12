@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        #hint{
+            display: none;/*id = hint 안보이게 숨기기*/
+        }
+        #hint1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입 하기</h1>
+    <form action="회원가입성공.html">
+        <label>아이디</label>
+        <input type="text" required onclick="showhint1()">
+        <div id="hint1">영문자 대/소문자만 입력가능</div>
+        <br>
+        <label>패스워드 확인</label>
+        <input type="password" id="pwconfirm" required onfocus="showhint()" onblur="blindhint()">
+        <br>
+        <label>이메일</label>
+        <input type="email" id="email" required placeholder="이메일을 입력하세요.">
+        <label>주소</label>
+        
+        <input type="text" required>
+         <div id="hint">
+            영문자 대/ 소문자, 특수문자, 숫자 포함 8~32자 
+         </div>
+        <button>가입</button>
+    </form>
+    <script src="../회원가입게시판/UI_구현.js">
+
+    </script>
+</body>
+</html>
