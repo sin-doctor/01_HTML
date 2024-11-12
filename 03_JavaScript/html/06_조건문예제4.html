@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>성적에 따라 등급 출력</title>
-    <link rel="stylesheet" href="../css/06_조건문예제4.css">
-</head>
-<body>
+    <style>
+      .A {
+        color: #155724;
+        background-color: #d4edda;
+        border: 2px solid #c3e6cb;
+      }
+      .B {
+        color: #856404;
+        background-color: #fff3cd;
+        border: 2px solid #ffeeba;
+      }
+      .C {
+        color: #0c5460;
+        background-color: #d1ecf1;
+        border: 2px solid #bee5eb;
+      }
+      .D {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 2px solid #f5c6cb;
+      }
+      .F {
+        color: white;
+        background-color: #dc3545;
+        border: 2px solid #c82333;
+      }
+    </style>
+  </head>
+  <body>
     <h1>점수를 입력하세요.(0 ~ 100 입력가능)</h1>
-    <input type="number" id="inputScore" placeholder="점수입력" min="0" max="100" />
+    <input
+      type="number"
+      id="inputScore"
+      placeholder="점수 입력"
+      min="0"
+      max="100"
+    />
     <button onclick="checkGrade()">등급확인</button>
     <p id="gradeMsg"></p>
     <script src="../js/06_조건문예제4.js"></script>
-</body>
+  </body>
 </html>
