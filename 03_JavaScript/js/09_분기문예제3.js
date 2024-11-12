@@ -1,16 +1,19 @@
+const price = document.getElementById("price");
+let 총금액 = 0;
 function add(num) {
   // num = 파라미터 = 매개변수
   switch (num) {
     case "1":
-      price.innerText = "금액확인하기 : 3000";
+      총금액 += 3000;
       break;
     case "2":
-      price.innerText = "금액확인하기 : 5500";
+      총금액 += 5500;
       break;
     case "3":
-      price.innerText = "금액확인하기 : 8800";
+      총금액 += 8800;
       break;
   }
+  price.innerText = "금액확인하기 : " + 총금액;
 }
 /*
         const price = document.getElementById("price");
