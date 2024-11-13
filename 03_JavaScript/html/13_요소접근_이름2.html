@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이름 속성을 활용해서 checkbox radio 활용하기 </title>
+</head>
+<body>
+    <h1>이름 속성을 활용해서 checkbox radio 활용하기</h1>
+    <input type="checkbox" name="hobby" id="music" value="음악감상">
+    <label for="music">음악감상</label>
+    <input type="checkbox" name="hobby" id="sports" value="운동">
+    <label for="sports">운동</label>
+    <input type="checkbox" name="hobby" id="book" value="독서">
+    <label for="book">독서</label>
+    <input type="checkbox" name="hobby" id="trip" value="여행">
+    <label for="trip">여행</label>
+    <button onclick="checkHobby()">확인</button>
+    <p id="result"></p>
+    <script>
+        /*
+        만약에 선택한 취미가 1개라도 있음ㄴ 
+        선택한 취미며과 몇개 선택도이었는지 출력 
+        
+        선택한 취미가 없으면 
+        선택된 취미가 없습니다. 출력
+        */
+        function checkHobby(){
+            const hobbyList = document.getElementsByName("hobby");
+            let str ="";
+            let count = 0; 
+
+            for (let i = 0; i < hobbyList.length ; i++){
+                if(hobbyList[i].checked){
+                    str += hobbyList[i].value + " ";
+                    count++;
+                }               
+            }
+            const inText = `${str}<br>선택된 취미 개수: ${count}`;
+
+            if(count > 0){
+                document.getElementById("result").innerHTML = inText;
+            }else{
+                document.getElementById("result").innerHTML ="선택된 취미가 없습니다";
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>
