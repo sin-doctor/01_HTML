@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            color: blue;
+            text-align: center;
+        }
+
+        .text {
+            color: black;
+            text-align: center;
+        }
+
+        .highlighted {
+            color: red;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: blue;
+        }
+        button {
+          border: none;
+          padding: 10px 20px;
+          font-size: 20px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: aliceblue;
+        }    
+    </style>
+</head>
+<body>
+      <!-- 1. getElementById() 사용하기 -->
+      <h1 id="title">안녕하세요, 반가워요!</h1>
+      <button onclick="titleColor()">제목 색상 변경</button>
+  
+      <hr />
+  
+      <!-- 2. getElementsByClassName() 사용하기 -->
+      <h2 class="text">텍스트 1</h2>
+      <h2 class="text">텍스트 2</h2>
+      <h2 class="text">텍스트 3</h2>
+      <button onclick="textStress()">텍스트 강조</button>
+  
+      <hr />
+  
+      <!-- 3. getElementsByName(), getElementById() 사용하기 -->
+      <label>이름을 입력하세요:</label>
+      <input type="text" name="username" placeholder="이름">
+      <button onclick="nameMark()">이름 표시</button>
+      <p>당신의 이름: <span id="nameOutput"></span></p>
+    
+      <script>
+        function titleColor(){
+            const titleC = document.getElementById("title");
+            titleC.style.color = "green";
+        }
+        function textStress(){
+            const texts = document.getElementsByClassName("text");
+            for(let i = 0; i < texts.length; i++){
+                texts[i].style.color="red";
+                texts[i].style.fontWeight ="bold";
+            }
+        }
+        function nameMark(){
+            const nameInput = document.getElementsByName("username")[0];
+            const nameOutput = document.getElementById("nameOutput");
+            nameOutput.innerText = nameInput.value;
+        }
+      </script>
+</body>
+</html>
