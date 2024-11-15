@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="241115.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>행복나라 사이트</h1>
+        <p>행복나라에 오신 것을 환영합니다.</p>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <a href="메인.html">메인페이지</a>
+          <a href="약관동의.html">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <form action="메인.html">
+        아이디 : <input type="text" id="id" name="id"><br>
+        비밀번호 : <input type="password" id="password" name="password"><br>
+        이메일 : <input type="email" id="email" name="email"><br>
+        <button onclick="회원가입(event)">동의하고 회원가입</button>
+    </form>
+    
+    <script>
+     
+        function 회원가입(e){
+            e.preventDefault(); 
+            const id = document.getElementById("id").value;
+            const PW = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+
+
+            const idRegExp = /^[a-zA-Z0-9]{5,12}$/;
+            const PWRegExp =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            const emailRegExp =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if(!idRegExp.test(id)){
+                alert("아이디는 5-12자의 영문자 및 숫자여야합니다.");
+                return false; 
+            }
+            if(!PWRegExp.test(PW)){
+                alert("비밀번호는 8자이상 영문기호를 같이 입력하셔야합니다");
+                return false;
+            }         
+            if(!emailRegExp.test(email)){
+                alert("이메일 형식을 잘못입력하셨습니다.");
+                return false;
+            }
+            alert("회원가입이 완료되었습니다.")
+        }
+    </script>
+  </body>
+</html>
